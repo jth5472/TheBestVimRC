@@ -13,6 +13,7 @@ Plugin 'cocopon/iceberg.vim'
 Plugin 'junegunn/fzf'
 Plugin 'arcticicestudio/nord-vim'
 Plugin 'jdkanani/vim-material-theme'
+Plugin 'christoomey/vim-tmux-navigator'
 
 call vundle#end()            
 filetype plugin indent on   
@@ -84,4 +85,11 @@ nmap <leader>l :wincmd l<CR>
 nmap <leader>h :wincmd h<CR>
 nmap <leader>j :wincmd j<CR>
 nmap <leader>k :wincmd k<CR>
+let g:tmux_navigator_no_mappings = 1
+
+noremap <silent> <leader>h :<C-U>TmuxNavigateLeft<cr>
+noremap <silent> <leader>j :<C-U>TmuxNavigateDown<cr>
+noremap <silent> <leader>k :<C-U>TmuxNavigateUp<cr>
+noremap <silent> <leader>l :<C-U>TmuxNavigateRight<cr>
+
 colorscheme iceberg
